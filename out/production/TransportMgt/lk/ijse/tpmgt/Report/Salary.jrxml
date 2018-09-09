@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-30T06:31:28 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Salary" pageWidth="631" pageHeight="842" columnWidth="591" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="533106e3-19ec-4257-87df-96456e774935">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Transport"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="457"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="532"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select sId,salary.nic,name,sDate,totalKm,total
+from salary,driver
+where salary.nic=driver.nic
+order by salary.sId desc]]>
+	</queryString>
+	<field name="sId" class="java.lang.String"/>
+	<field name="nic" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="sDate" class="java.sql.Date"/>
+	<field name="totalKm" class="java.math.BigDecimal"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<group name="nic">
+		<groupExpression><![CDATA[$F{nic}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<group name="sDate">
+		<groupExpression><![CDATA[$F{sDate}]]></groupExpression>
+	</group>
+	<group name="totalKm">
+		<groupExpression><![CDATA[$F{totalKm}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="20" width="174" height="40" forecolor="#6634C2" uuid="a03fded5-dbef-469f-944f-709d858897d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria Math" size="20" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ Salary History]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="130" height="30" uuid="c327aa80-cd10-4724-83dc-90e2425d367c"/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="100" height="30" uuid="c1bfacf1-b21d-48e9-9d0f-dafb53c9458a"/>
+				<text><![CDATA[Driver Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="109" height="30" uuid="5c373d77-5510-4333-a58f-72ee1a9272ec"/>
+				<text><![CDATA[Salary Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="90" height="30" uuid="a535091e-c35c-4899-9f35-a887fc0d01f7"/>
+				<text><![CDATA[Total Km]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="0" width="80" height="30" uuid="6b747c1a-0013-4715-9f74-3d96fba0ba8a"/>
+				<text><![CDATA[Total Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="de418827-5b8d-4ea8-b102-8aae0d2b9d7e"/>
+				<text><![CDATA[Salary ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="10" width="129" height="30" uuid="cc6468b7-e55f-463a-88f7-cabb77e4a514"/>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="10" width="100" height="30" uuid="eb756223-e4f8-437a-8e27-9227b32276cf"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="109" height="30" uuid="81b4acb9-d746-4ac8-bd11-6455a3a1baed"/>
+				<textFieldExpression><![CDATA[$F{sDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="10" width="89" height="30" uuid="458cf11e-7579-490e-89ef-15be3c5ff97f"/>
+				<textFieldExpression><![CDATA[$F{totalKm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="10" width="81" height="30" uuid="4b84d096-b1c9-4c88-bfbf-34d4640a542b"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="8" width="80" height="30" uuid="856254a7-77b7-4170-8d46-5b074fc6a56f"/>
+				<textFieldExpression><![CDATA[$F{sId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

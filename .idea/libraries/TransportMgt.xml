@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TransportMgt">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/TransportMgt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="611.0" prefWidth="869.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.tpmgt.controller.ManageSalaryFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/tpmgt/view/style/managesalaryform.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="619.0" fitWidth="869.0" opacity="0.35" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/7e6a31f820249b11bed9c3295f14d31e.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="319.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary" textAlignment="CENTER" wrappingWidth="230.13671875">
+         <font>
+            <Font name="Monotype Corsiva" size="60.0" />
+         </font>
+      </Text>
+      <JFXDatePicker fx:id="txtSDate" layoutX="711.0" layoutY="135.0" prefHeight="28.0" prefWidth="130.0" promptText="From Date:" />
+      <JFXTextField fx:id="txtBonus" labelFloat="true" layoutX="43.0" layoutY="201.0" prefHeight="26.0" prefWidth="144.0" promptText="Bonus:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="502.0" layoutY="135.0" prefHeight="26.0" prefWidth="129.0" promptText="Name:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <TableView fx:id="tblSalary" layoutX="19.0" layoutY="254.0" prefHeight="267.0" prefWidth="830.0">
+        <columns>
+          <TableColumn prefWidth="69.59997367858887" text="SID" />
+          <TableColumn prefWidth="101.6000747680664" text="NIC" />
+            <TableColumn prefWidth="98.39999389648438" text="Date" />
+            <TableColumn prefWidth="136.79998779296875" text="Amaunt Pre Km" />
+            <TableColumn minWidth="4.800048828125" prefWidth="81.60003662109375" text="Total Km" />
+            <TableColumn minWidth="0.0" prefWidth="111.20010375976562" text="Earn Salary" />
+            <TableColumn minWidth="0.0" prefWidth="101.5999755859375" text="Bonus" />
+            <TableColumn minWidth="0.0" prefWidth="128.800048828125" text="Total Salary" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtAmountPerKm" labelFloat="true" layoutX="272.0" layoutY="201.0" prefHeight="26.0" prefWidth="130.0" promptText="Amount Per Km:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbNIC" labelFloat="true" layoutX="272.0" layoutY="136.0" onAction="#cmbNic" prefHeight="26.0" prefWidth="144.0" promptText="NIC:" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnPay" layoutX="693.0" layoutY="539.0" onAction="#btnPayOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #4286f4;" text="Pay">
+         <font>
+            <Font name="Cambria Bold Italic" size="20.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="61.0" fitWidth="65.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8_Go_Back_104px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtSalaryID" labelFloat="true" layoutX="46.0" layoutY="136.0" promptText="Salary ID:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnReport" layoutX="77.0" layoutY="546.0" onAction="#btnOnActionReport" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: #4cef93;" text="Report">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

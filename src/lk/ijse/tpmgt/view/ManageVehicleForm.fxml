@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="550.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.tpmgt.controller.ManageVehicleFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/tpmgt/view/style/managevehicleform.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="759.0" layoutX="1.0" opacity="0.33" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/7e6a31f820249b11bed9c3295f14d31e.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="78.0" layoutX="2.0" layoutY="1.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8_Go_Back_104px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtRegNo" labelFloat="true" layoutX="33.0" layoutY="170.0" prefHeight="26.0" prefWidth="174.0" promptText="Vehicle Registration No:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtColour" labelFloat="true" layoutX="33.0" layoutY="292.0" prefHeight="26.0" prefWidth="174.0" promptText="Vehicle Colour :" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtBrand" labelFloat="true" layoutX="33.0" layoutY="230.0" prefHeight="26.0" prefWidth="174.0" promptText="Vehicle Brand :" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <TableView fx:id="tblVehicle" layoutX="249.0" layoutY="129.0" onMouseClicked="#tblVehicleOnAction" prefHeight="398.0" prefWidth="474.0">
+        <columns>
+          <TableColumn prefWidth="119.20002746582031" text="Registration No" />
+          <TableColumn prefWidth="104.79998779296875" text="Brand" />
+            <TableColumn prefWidth="95.20001220703125" text="Colour" />
+            <TableColumn prefWidth="186.39990234375" text="Bought Date" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="33.0" layoutY="419.0" onAction="#btnSaveOnAction" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #a5ff84;" text="Save">
+         <font>
+            <Font name="Cambria Bold Italic" size="17.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="141.0" layoutY="420.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #ff7f59;" text="Delete">
+         <font>
+            <Font name="Cambria Bold Italic" size="16.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnAddNew" layoutX="32.0" layoutY="116.0" onAction="#btnAddNewOnAction" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #6ae2d6;" text="Add New ">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></JFXButton>
+      <Text fontSmoothingType="LCD" layoutX="227.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle" textAlignment="CENTER" wrappingWidth="295.7367248535156">
+         <font>
+            <Font name="Monotype Corsiva" size="60.0" />
+         </font>
+      </Text>
+      <JFXDatePicker fx:id="txtBoughtDate" layoutX="34.0" layoutY="353.0" promptText="Vehicle Bought Date :" />
+      <JFXButton fx:id="btnReport" layoutX="82.0" layoutY="485.0" onAction="#btnReportOnAction" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #4cef93;" text="Report">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

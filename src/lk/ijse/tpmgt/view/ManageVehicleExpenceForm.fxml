@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="708.0" prefWidth="814.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.tpmgt.controller.ManageVehicleExpenceFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/tpmgt/view/style/managevehicleexpenceform.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="708.0" fitWidth="830.0" layoutX="-2.0" opacity="0.3" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../asset/7e6a31f820249b11bed9c3295f14d31111122221e.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="78.0" layoutX="2.0" layoutY="2.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8_Go_Back_104px.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="256.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expences" textAlignment="CENTER" wrappingWidth="305.33673095703125">
+         <font>
+            <Font name="Monotype Corsiva" size="60.0" />
+         </font>
+      </Text>
+      <Separator layoutX="4.0" layoutY="194.0" prefHeight="26.0" prefWidth="817.0" />
+      <JFXTextField fx:id="txtExpenceType" labelFloat="true" layoutX="229.0" layoutY="147.0" promptText="New Expence Type:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddTypeExprnce" layoutX="473.0" layoutY="140.0" onAction="#btnAddTypeOnAction" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #6ae2d6;" text="Add">
+         <font>
+            <Font name="Cambria Bold Italic" size="19.0" />
+         </font></JFXButton>
+      <JFXComboBox fx:id="cmbExpenceType" labelFloat="true" layoutX="257.0" layoutY="264.0" onAction="#exTypeIDComboOnAction" prefHeight="26.0" prefWidth="152.0" promptText="Expence Type ID:" unFocusColor="BLACK" />
+      <Label layoutX="41.0" layoutY="213.0" prefHeight="38.0" prefWidth="113.0" text="Vehicle Expence" textFill="#134877">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicleRegNO" labelFloat="true" layoutX="38.0" layoutY="263.0" prefHeight="26.0" prefWidth="152.0" promptText="Vehicle reg No:" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtType" editable="false" labelFloat="true" layoutX="458.0" layoutY="265.0" prefHeight="26.0" prefWidth="144.0" promptText="Type:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXDatePicker fx:id="txtExpenceDate" defaultColor="#4a008f" layoutX="41.0" layoutY="336.0" promptText="Expence Date:" />
+      <JFXTextField fx:id="txtExpenceAmount" labelFloat="true" layoutX="253.0" layoutY="337.0" prefHeight="26.0" prefWidth="152.0" promptText="Expence Amount:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextArea fx:id="txtDescription" labelFloat="true" layoutX="456.0" layoutY="325.0" prefHeight="35.0" prefWidth="319.0" text="Description:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextArea>
+      <TableView fx:id="tblExpence" layoutX="34.0" layoutY="440.0" prefHeight="240.0" prefWidth="750.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Date" />
+          <TableColumn prefWidth="114.39998626708984" text="Vehicle Reg No" />
+            <TableColumn prefWidth="59.20001220703125" text="Type" />
+            <TableColumn prefWidth="100.00006103515625" text="Amount" />
+            <TableColumn prefWidth="357.6000671386719" text="Description" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddDetail" layoutX="297.0" layoutY="387.0" onAction="#btnAddDetailOnAction" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: #ff8cff;" text="Add Detail">
+         <font>
+            <Font name="Cambria Bold Italic" size="18.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="txtTypeID" labelFloat="true" layoutX="46.0" layoutY="147.0" promptText="Type ID:" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <Label layoutX="46.0" layoutY="99.0" prefHeight="28.0" prefWidth="114.0" text="Add New Type" textFill="#134877">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
